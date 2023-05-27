@@ -3,7 +3,6 @@ class DataNode:
         self.__object: object = object_
         self.__meta: dict = meta
         self.__id: str = hash(object)
-        self.__relations: dict = relations
 
     @property
     def object(self) -> object:
@@ -16,12 +15,8 @@ class DataNode:
     @property
     def id(self) -> str:
         return self.__id
-    
-    @property
-    def relations(self, type_: type = dict):
-        if (type_ is dict):
-            return self.__relations
-        
-        return list(self.__relations.items())
+
+    def __repr__(self) -> str:
+        return ""
     
 
